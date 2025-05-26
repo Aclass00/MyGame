@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌾 مزرعة الموارد</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- تسجيل الدخول -->
+    <div id="login-section">
+      <h1>🌾 مزرعة الموارد</h1>
+      <input type="text" id="login-username" placeholder="اسم المستخدم"><br>
+      <input type="password" id="login-password" placeholder="كلمة المرور"><br>
+      <button onclick="login()">تسجيل الدخول</button>
+      <p><a href="#" onclick="showRegister()">تسجيل حساب جديد</a> | <a href="#" onclick="showReset()">نسيت كلمة المرور؟</a></p>
+      <p id="login-msg" class="msg"></p>
+    </div>
+
+    <!-- تسجيل جديد -->
+    <div id="register-section" class="hidden">
+      <h2>تسجيل حساب جديد</h2>
+      <input type="text" id="reg-username" placeholder="اسم المستخدم"><br>
+      <input type="password" id="reg-password" placeholder="كلمة المرور"><br>
+      <input type="email" id="reg-email" placeholder="البريد الإلكتروني"><br>
+      <button onclick="register()">تسجيل</button>
+      <p><a href="#" onclick="showLogin()">عودة إلى تسجيل الدخول</a></p>
+      <p id="reg-msg" class="msg"></p>
+    </div>
+
+    <!-- إعادة تعيين كلمة المرور -->
+    <div id="reset-section" class="hidden">
+      <h2>إعادة تعيين كلمة المرور</h2>
+      <input type="email" id="reset-email" placeholder="أدخل بريدك الإلكتروني"><br>
+      <button onclick="resetPassword()">استرجاع</button>
+      <p><a href="#" onclick="showLogin()">عودة إلى تسجيل الدخول</a></p>
+      <p id="reset-msg" class="msg"></p>
+    </div>
+
+    <!-- اللعبة -->
+    <div id="game-section" class="hidden">
+      <h2>مرحبًا <span id="player-name"></span>!</h2>
+      <p>🪙 الموارد: <span id="resources">0</span></p>
+      <div>
+        <p>🌱 الزراعة (مستوى <span id="farm">1</span>) <button onclick="levelUp('farm')">⬆ رفع</button></p>
+        <p>🔍 الاستكشاف (مستوى <span id="explore">1</span>) <button onclick="levelUp('explore')">⬆ رفع</button></p>
+        <p>🏗 التطوير (مستوى <span id="build">1</span>) <button onclick="levelUp('build')">⬆ رفع</button></p>
+      </div>
+      <button onclick="logout()">🚪 خروج</button>
+      <button onclick="showLeaderboard()">🏆 المتصدرين</button>
+    </div>
+
+    <!-- المتصدرين -->
+    <div id="leaderboard-section" class="hidden">
+      <h2>🏆 لائحة المتصدرين</h2>
+      <div id="leaderboard"></div>
+      <button onclick="hideLeaderboard()">🔙 رجوع</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

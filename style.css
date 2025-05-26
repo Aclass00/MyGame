@@ -1,0 +1,32 @@
+
+body {
+  font-family: Tahoma, sans-serif;
+  direction: rtl;
+  text-align: center;
+  background: #f4f4f4;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  margin-top: 40px;
+  box-shadow: 0 0 10px #ccc;
+}
+input {
+  padding: 10px;
+  width: 80%;
+  margin: 5px;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+}
+.hidden {
+  display: none;
+}
+.msg {
+  color: red;
+  font-size: 0.9em;
+}
