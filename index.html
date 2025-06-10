@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مزرعة الموارد | دخول</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-green-200 via-blue-100 to-green-100 font-poppins">
+
+  <div id="login-container" class="flex flex-col items-center justify-center min-h-screen space-y-6">
+    <h1 class="text-4xl font-pacifico text-green-700">مزرعة الموارد</h1>
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-sm">
+      <input id="username" class="input" type="text" placeholder="اسم المستخدم">
+      <input id="password" class="input" type="password" placeholder="كلمة المرور">
+      <input id="email" class="input hidden" type="email" placeholder="البريد الإلكتروني">
+      <button id="login-btn" class="btn w-full bg-green-500 hover:bg-green-600 text-white">تسجيل الدخول</button>
+      <button id="register-btn" class="btn w-full bg-blue-500 hover:bg-blue-600 text-white mt-2">إنشاء حساب</button>
+      <p id="msg" class="text-sm text-red-500 mt-2"></p>
+    </div>
+  </div>
+
+  <div id="game-container" class="hidden p-6 text-center">
+    <h2 class="text-2xl font-bold mb-4">أهلًا، <span id="player-name"></span>!</h2>
+    <p>🪙 الموارد: <span id="resources">0</span></p>
+    <div class="mt-4">
+      <p>🌱 الزراعة: <span id="farm">1</span> <button onclick="levelUp('farm')" class="btn-sm">⬆</button></p>
+      <p>🔍 الاستكشاف: <span id="explore">1</span> <button onclick="levelUp('explore')" class="btn-sm">⬆</button></p>
+      <p>🏗 التطوير: <span id="build">1</span> <button onclick="levelUp('build')" class="btn-sm">⬆</button></p>
+    </div>
+    <button onclick="logout()" class="mt-6 btn bg-red-500 text-white hover:bg-red-600">تسجيل الخروج</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

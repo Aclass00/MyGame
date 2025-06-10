@@ -1,0 +1,23 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.btn, .btn-sm {
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 14px;
+  background: #eee;
+}
